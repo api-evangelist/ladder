@@ -1,25 +1,149 @@
 aid: ladder
 name: Ladder
-description: Ladder is a company surfaced as a portfolio company of canaan-partners, general-catalyst,
-  lightspeed-venture-partners and added to the API Evangelist network as a stub for enrichment. This profile
-  is a lead awaiting the enrichment pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/ladder/refs/heads/main/apis.yml
+description: >-
+  Ladder (Ladder Financial Inc., operating as Ladder Insurance Services, LLC) is a
+  digital life insurance company founded in 2015 that sells flexible term life
+  insurance fully online — a few health questions, no medical exam for policies up
+  to $3M, 10-to-30 year terms, and "laddering" that lets a policyholder raise or
+  lower coverage as their circumstances change. Policies are underwritten by
+  partner carriers (Amica Life, Fidelity Security Life, and S.USA Life / Prosperity
+  Life Group). Alongside the direct-to-consumer product, Ladder runs an embedded
+  insurance distribution business: the Ladder API lets fintech, lending, investing,
+  benefits, and health-and-wellness platforms embed quoting and a full term-life
+  application into their own site or app in roughly ten lines of JavaScript, with
+  a Quoter, Connector, Calculator, and Account Manager surface, and commission or
+  marketing-fee revenue share. Access to the API is granted through a partner
+  request rather than public self-service signup. Ladder is backed by Canaan
+  Partners, General Catalyst, and Lightspeed Venture Partners.
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - canaan-partners
 - general-catalyst
 - lightspeed-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: embedded-insurance-api-provider
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
+image: https://ddw3p1oh0ex89.cloudfront.net/assets/b/12d840655daaf0aca843047d94b9b219dda2b8ac2bd5431dd0b6cd6d937b0e3d/static/img/favicon-rungs/apple-touch-icon.png
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Insurance
+- Insurtech
+- Life Insurance
+- Embedded Finance
+- Embedded Insurance
+- Financial Services
+- Fintech
+- Quoting
+apis:
+- aid: ladder-api
+  name: Ladder API
+  description: >-
+    The Ladder API is an embedded term-life-insurance distribution surface for
+    partner platforms. It is delivered primarily as a client-side JavaScript
+    integration — a partner loads Ladder's v3 bundle, constructs a LadderAPI
+    instance with a user auth token minted by the partner's own backend, and
+    mounts one of Ladder's flows into a container element on the page. The
+    published surfaces are the Embeddable API (the full white-labeled
+    application flow), the Quoter API (price estimates in the partner's UI), the
+    Connector (pre-fills known applicant data and deep-links into the right step
+    of Ladder's application), the Calculator (coverage-needs questionnaire), and
+    the Account Manager (lets a partner's users manage existing Ladder policies
+    in-app). Reference documentation is gated behind a partner access request;
+    the public surface documents the integration model, the loader, and the
+    product set.
+  humanURL: https://www.ladderlife.com/api
+  baseURL: https://www.ladderlife.com/api/v3/
+  tags:
+  - Insurance
+  - Life Insurance
+  - Embedded Insurance
+  - Quoting
+  - Embedded Finance
+  properties:
+  - type: Documentation
+    url: https://www.ladderlife.com/api
+  - type: SignUp
+    url: https://www.ladderlife.com/api
+  - type: Authentication
+    url: authentication/ladder-authentication.yml
+  - type: Conventions
+    url: conventions/ladder-conventions.yml
+  - type: Components
+    url: components/ladder-components.yml
+  - type: Lifecycle
+    url: lifecycle/ladder-lifecycle.yml
+common:
+- type: DeveloperPortal
+  url: https://www.ladderlife.com/api
+- type: Documentation
+  url: https://www.ladderlife.com/api
+- type: Website
+  url: https://www.ladderlife.com/
+- type: SignUp
+  url: https://www.ladderlife.com/api
+- type: Login
+  url: https://www.ladderlife.com/login
+- type: Support
+  url: https://support.ladderlife.com/hc/en-us
+- type: HelpCenter
+  url: https://support.ladderlife.com/hc/en-us
+- type: Blog
+  url: https://medium.com/ladderlife
+- type: GitHubOrganization
+  url: https://github.com/ladderlife
+- type: TermsOfService
+  url: https://www.ladderlife.com/terms
+- type: PrivacyPolicy
+  url: https://www.ladderlife.com/privacy
+- type: Security
+  url: https://www.ladderlife.com/security
+- type: SecurityTxt
+  url: well-known/ladder-security.txt
+- type: WellKnown
+  url: well-known/ladder-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/ladder-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/ladder-domain-security.yml
+- type: Authentication
+  url: authentication/ladder-authentication.yml
+- type: Conventions
+  url: conventions/ladder-conventions.yml
+- type: Components
+  url: components/ladder-components.yml
+- type: Lifecycle
+  url: lifecycle/ladder-lifecycle.yml
+- type: LLMsTxt
+  url: llms/ladder-llms.txt
+- type: Licenses
+  url: https://www.ladderlife.com/licenses
+- type: Careers
+  url: https://www.ladderlife.com/careers
+- type: About
+  url: https://www.ladderlife.com/about
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
