@@ -1,0 +1,70 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.ladderlife.com/api
+description: >-
+  Ladder's API is delivered as a set of embeddable, client-side surfaces rather
+  than a conventional server-side REST product. A partner includes Ladder's v3
+  JavaScript bundle, constructs a LadderAPI instance with a user auth token
+  minted by the partner's own backend, and mounts one of the flows into a
+  container element. These are the embeddable UI components; Ladder publishes no
+  first-party server SDK packages, so there is no packages/ artifact.
+docs:
+- https://www.ladderlife.com/api
+libraries:
+- name: Ladder API v3 bundle
+  url: https://www.ladderlife.com/api/v3/js/main.js
+  loader: <script src="https://www.ladderlife.com/api/v3/js/main.js"></script>
+  global: LadderAPI
+  status: 200
+  purpose: >-
+    Loads the Ladder embedded surfaces and exposes the LadderAPI constructor
+    (takes the partner-minted user token) plus flow factories that return an
+    object with .mount(selector).
+families:
+  embedded_application:
+    description: >-
+      The full white-labeled term-life application experience rendered inside the
+      partner's own page — "in less than 10 lines of code".
+    components:
+    - name: Embeddable API
+      factory: applicationFlow(config)
+      mount: .mount("#life-insurance-container")
+      description: >-
+        Mounts the complete Ladder term life application flow, styled via a
+        partner-supplied config object, inside a container element on the
+        partner's site or app.
+  quoting:
+    description: Price-estimate and coverage-sizing surfaces that run in the partner's UI.
+    components:
+    - name: Quoter API
+      description: >-
+        Renders a term life price estimate on the partner's platform, then hands
+        the user off to Ladder to finish the application. Most applicants
+        complete the process in minutes and receive an instant coverage offer.
+    - name: Calculator
+      description: >-
+        Coverage-needs questionnaire — asks a short set of questions about income
+        and lifestyle and suggests an appropriate coverage amount before the user
+        quotes or applies.
+  handoff:
+    description: Data pre-fill and deep-linking into Ladder's own application.
+    components:
+    - name: Connector
+      description: >-
+        Pre-fills the application with data the partner already holds about the
+        user, lets them run price estimates from the partner's site or app, and
+        then routes them to the relevant page of Ladder's life insurance
+        application. Positioned as a conversion-improvement surface.
+  policy_management:
+    description: Post-purchase servicing embedded in the partner's product.
+    components:
+    - name: Account Manager
+      description: >-
+        Lets a partner's users view and manage their existing Ladder policies
+        directly from the partner's app or website, so the partner can act as a
+        one-stop financial-wellness surface.
+integration_notes:
+- The integration is browser-side; the user auth token must be minted server-side by the partner.
+- Access to configuration and reference docs requires an approved partner request at https://www.ladderlife.com/api.
+- Revenue model is partner-selectable — commission on placed policies, or marketing fees for qualified leads.
+- Ladder positions the API for fintech, health and wellness, investing, lending, employee benefits, and insurance platforms.

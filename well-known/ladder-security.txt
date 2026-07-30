@@ -1,0 +1,5 @@
+Contact: mailto:security@ladderlife.com
+Preferred-Languages: en
+Canonical: https://www.ladderlife.com/.well-known/security.txt
+Policy: https://ladderlife.com/security
+Expires: Thu, 31 Mar 2027 10:00:00 -0700

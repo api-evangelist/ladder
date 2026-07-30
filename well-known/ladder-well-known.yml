@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://www.ladderlife.com/.well-known/
+host: https://www.ladderlife.com
+description: >-
+  Well-known discovery surface probed on Ladder's primary web/API host. Ladder
+  publishes an RFC 9116 security.txt pointing at its responsible-disclosure
+  policy; it publishes no OIDC/OAuth discovery documents, no api-catalog, and no
+  ai-plugin manifest. Absence is recorded here as observed data.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: ladder-security.txt
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+other_probes:
+- path: /llms.txt
+  status: 404
+- path: /openapi.json
+  status: 404
+- path: /robots.txt
+  status: 200
+- path: /sitemap.xml
+  status: 404

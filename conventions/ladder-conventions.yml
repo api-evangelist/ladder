@@ -1,0 +1,66 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.ladderlife.com/api
+description: >-
+  Cross-cutting conventions for the Ladder partner API, captured from the public
+  partner page and live probes. Ladder's integration model is unusual for this
+  artifact type: the contract is a versioned client-side JavaScript bundle and a
+  mount-based component API, not a documented REST resource surface. Only what
+  Ladder actually publishes is recorded here — pagination, idempotency, request
+  tracing, and the error envelope are NOT publicly documented and are recorded as
+  unknown rather than guessed.
+base_url: https://www.ladderlife.com/api/v3/
+api_style: >-
+  Embedded client-side JavaScript SDK over HTTPS (loader bundle + constructor +
+  flow factories with .mount(selector)); no public REST/GraphQL reference.
+authentication:
+  scheme: partner-minted user auth token passed to the LadderAPI constructor
+  issued_by: the partner's own backend
+  docs: https://www.ladderlife.com/api
+  detail: authentication/ladder-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v3
+  evidence: loader served from https://www.ladderlife.com/api/v3/js/main.js
+  docs: https://www.ladderlife.com/api
+  detail: lifecycle/ladder-lifecycle.yml
+configuration:
+  mechanism: partner-supplied config object passed to the flow factory
+  purpose: styling and flow options for the mounted experience
+  evidence: 'const config = {...}; const appFlow = ladderAPI.applicationFlow(config);'
+mounting:
+  mechanism: appFlow.mount("#selector")
+  description: Each flow object exposes a mount() that renders into a DOM container.
+idempotency:
+  supported: unknown
+  documented: false
+  note: >-
+    Ladder publishes no idempotency-key contract and no OpenAPI in which an
+    Idempotency-Key parameter could be observed. No Idempotency pointer is
+    emitted.
+pagination:
+  documented: false
+  note: No list/collection semantics are published on the public partner surface.
+error_envelope:
+  documented: false
+  note: >-
+    No public error reference or problem-details contract; no errors/ artifact is
+    asserted.
+rate_limits:
+  documented: false
+  note: No published rate-limit policy or rate-limit response headers.
+transport_security:
+  https: true
+  tls_version: TLSv1.3
+  hsts: true
+  hsts_max_age: 31536000
+  detail: security/ladder-domain-security.yml
+access:
+  model: partner-request
+  url: https://www.ladderlife.com/api
+  note: Configuration and reference documentation are gated behind an approved access request.
+cross_links:
+  authentication: authentication/ladder-authentication.yml
+  components: components/ladder-components.yml
+  lifecycle: lifecycle/ladder-lifecycle.yml
+  security: security/ladder-domain-security.yml

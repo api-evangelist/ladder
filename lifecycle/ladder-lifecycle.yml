@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.ladderlife.com/api
+description: >-
+  Lifecycle posture for the Ladder partner API, from the public partner surface
+  and live probes. Ladder versions its embedded bundle in the URI path (v3) but
+  publishes no changelog, no deprecation or sunset policy, no SLA, and no status
+  page — each verified by probe and recorded here as an observed absence rather
+  than omitted.
+versioning:
+  scheme: uri-path
+  current: v3
+  evidence: https://www.ladderlife.com/api/v3/js/main.js returns 200
+  docs: https://www.ladderlife.com/api
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  documented: false
+  note: No public deprecation or sunset policy; no Deprecation pointer emitted.
+sla:
+  url: null
+  uptime_target: null
+  documented: false
+status_page:
+  url: null
+  documented: false
+  probes:
+  - url: https://status.ladderlife.com/
+    status: unreachable
+  note: No status page found; no StatusPage pointer emitted.
+changelog:
+  url: null
+  documented: false
+  probes:
+  - url: https://www.ladderlife.com/changelog
+    status: 200
+    result: >-
+      Serves the marketing homepage, not a changelog (title "Ladder Life |
+      Flexible life insurance in minutes."); the site returns a real 404 for
+      unknown paths, so this is a soft match and NOT a changelog.
+  note: No ChangeLog pointer emitted.
+deprecated_operations: []
+access_lifecycle:
+  model: partner-request
+  url: https://www.ladderlife.com/api
+  note: >-
+    Partners onboard by requesting access; there is no public self-service
+    signup, sandbox, or key provisioning surface.
