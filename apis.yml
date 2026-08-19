@@ -36,7 +36,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 image: https://ddw3p1oh0ex89.cloudfront.net/assets/b/12d840655daaf0aca843047d94b9b219dda2b8ac2bd5431dd0b6cd6d937b0e3d/static/img/favicon-rungs/apple-touch-icon.png
 created: '2026-07-17'
 modified: '2026-07-19'
