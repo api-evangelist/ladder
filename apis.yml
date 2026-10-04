@@ -54,7 +54,7 @@ tags:
 - Life Insurance
 - Embedded Finance
 - Embedded Insurance
-- Financial-Services
+- Financial Services
 - Fintech
 - Quoting
 tags_raw:
@@ -67,6 +67,7 @@ tags_raw:
 - Financial Services
 - Fintech
 - Quoting
+- Financial-Services
 apis:
 - aid: ladder:ladder-api
   name: Ladder API
