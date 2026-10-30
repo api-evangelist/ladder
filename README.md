@@ -64,16 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ladder (Ladder Financial Inc., operating as Ladder Insurance Services, LLC) is a digital life insurance company founded in 2015 that sells flexible term life insurance fully online — a few health questions, no medical exam for policies up to $3M, 10-to-30 year terms, and "laddering" that lets a policyholder raise or lower coverage as circumstances change. Policies are underwritten by partner carriers (Amica Life, Fidelity Security Life, and S.USA Life / Prosperity Life Group).
+Ladder (Ladder Financial Inc., operating as Ladder Insurance Services, LLC) is a digital life insurance company founded in 2015 that sells flexible term life insurance fully online — a few health questions, no medical exam for policies up to $3M, 10-to-30 year terms, and "laddering" that lets a policyholder raise or lower coverage as their circumstances change. Policies are underwritten by partner carriers (Amica Life, Fidelity Security Life, and S.USA Life / Prosperity Life Group). Alongside the direct-to-consumer product, Ladder runs an embedded insurance distribution business: the Ladder API lets fintech, lending, investing, benefits, and health-and-wellness platforms embed quoting and a full term-life application into their own site or app in roughly ten lines of JavaScript, with a Quoter, Connector, Calculator, and Account Manager surface, and commission or marketing-fee revenue share. Access to the API is granted through a partner request rather than public self-service signup. Ladder is backed by Canaan Partners, General Catalyst, and Lightspeed Venture Partners.
 
-Alongside the direct-to-consumer product, Ladder runs an embedded insurance distribution business. The [Ladder API](https://www.ladderlife.com/api) lets fintech, lending, investing, benefits, and health-and-wellness platforms embed quoting and a full term-life application into their own site or app in roughly ten lines of JavaScript, across five surfaces:
+**Areas:** Company · Insurance · Insurtech · Life Insurance · Embedded Finance · Embedded Insurance · Financial Services · Fintech · Quoting
 
-- **Embeddable API** — the full white-labeled application flow, mounted into a container element
-- **Quoter API** — price estimates rendered in the partner's UI
-- **Connector** — pre-fills known applicant data and deep-links into Ladder's application
-- **Calculator** — coverage-needs sizing questionnaire
-- **Account Manager** — in-app servicing of existing Ladder policies
+## Ladder on APIs.io
 
-Access is granted by partner request; reference documentation is not public, and Ladder publishes no OpenAPI definition. Ladder does publish an RFC 9116 `security.txt` and a full responsible-disclosure policy.
+Everything profiled for Ladder is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ladder/](https://apis.io/providers/ladder/)** — or go straight to one of the APIs or properties below.
 
-Backed by: canaan-partners, general-catalyst, lightspeed-venture-partners
+### APIs (1)
+
+- [Ladder API](https://apis.io/apis/ladder/ladder-api/) — The Ladder API is an embedded term-life-insurance distribution surface for partner platforms. It is delivered primarily as a client-side JavaScript…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ladder Authentication](https://apis.io/security/ladder/ladder-authentication/)
+- [Ladder Domain Security](https://apis.io/security/ladder/ladder-domain-security/)
+- [Ladder Vulnerability Disclosure](https://apis.io/security/ladder/ladder-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.ladderlife.com/)
+- [Documentation](https://www.ladderlife.com/api)
+- [Sign up](https://www.ladderlife.com/api)
+- [Support](https://support.ladderlife.com/hc/en-us)
+- [Blog](https://medium.com/ladderlife)
+- [Security](https://www.ladderlife.com/security)
+- [Terms of service](https://www.ladderlife.com/terms)
+- [Privacy policy](https://www.ladderlife.com/privacy)
+- [GitHub](https://github.com/ladderlife)
+
+## API Evangelist rating
+
+**Kin Score 24.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.8** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ladder/](https://apis.io/providers/ladder/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ladder: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ladder/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
